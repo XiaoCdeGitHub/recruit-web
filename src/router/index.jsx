@@ -11,22 +11,46 @@ import { Login } from "../pages/Login/Login";
 import { Main } from "../pages/Main/Main";
 import { ShowInfo } from "../pages/ShowInfo/ShowInfo";
 import { PublishInfo } from "../pages/PublishInfo/PublishInfo";
+import { Interview } from "../pages/Interview/Interview";
+import { Result } from "../pages/Result/Result";
+import { TimeTable } from "../pages/TimeTable/TimeTable";
+
+// hash路由 访问记得加 #
 export const router = createHashRouter([
+  // 登录路由
   {
     path: "/login",
     element: <Login></Login>,
   },
+  // 主页面的路由 默认是展示信息页面 其他页面均为子路由
   {
-    path: "/main",
+    path: "/",
     element: <Main></Main>,
     children: [
+      // 信息展示
       {
         index: true,
         element: <ShowInfo></ShowInfo>,
       },
+      // 信息发布
       {
         path: "publish",
         element: <PublishInfo></PublishInfo>,
+      },
+      // 面试主页
+      {
+        path: "interview",
+        element: <Interview></Interview>,
+      },
+      // 面试结果
+      {
+        path: "result",
+        element: <Result></Result>,
+      },
+      // 面试排班
+      {
+        path: "timetable",
+        element: <TimeTable></TimeTable>,
       },
     ],
   },

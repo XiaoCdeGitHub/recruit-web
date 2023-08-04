@@ -1,0 +1,16 @@
+.box{
+    width: 10vw;
+    height: 4vh;
+    background-color: skyblue;
+    text-align: center;
+    line-height: 4vh;
+    border-radius: 1rem;
+    margin: 1rem 3rem;
+    color: white;
+}
+
+.box:hover{
+    cursor: pointer;
+    color: black;
+    font-size: 1.2rem;
+}

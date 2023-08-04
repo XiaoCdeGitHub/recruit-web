@@ -11,10 +11,13 @@ import styles from "./ItvAdress.module.css";
 import {useDispatch} from 'react-redux'
 import { hiddenBackdrop } from "../../../../../store/interviewSlice";
 export const ItvAdress = () => {
+  
+  // 隐藏遮罩层
   const dispatch = useDispatch()
   const clickHandler = () => {
     dispatch(hiddenBackdrop())
   };
+
   return (
     <div className={styles.box}>
       <div className={styles.cardBox}>

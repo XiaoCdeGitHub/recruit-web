@@ -17,6 +17,11 @@ export const ItvMain = () => {
         <ItvItem></ItvItem>
         <ItvItem></ItvItem>
       </div>
+
+      {/* Backdrop遮罩层的使用 
+            获取Rudex的state 对其进行判断是否展示
+            利用Rudex使子组件可以对 state进行修改 在适当位置触发修改（展示/隐藏）
+      */}
       {isEnterBackdrop &&
         <Backdrop>
           <ItvAdress></ItvAdress>

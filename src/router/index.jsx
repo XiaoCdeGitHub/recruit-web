@@ -2,7 +2,7 @@
  * @Author: DoubleLiHao =2998000782@qq.com
  * @Date: 2023-08-02 19:38:22
  * @LastEditors: DoubleLiHao =2998000782@qq.com
- * @LastEditTime: 2023-08-04 19:14:28
+ * @LastEditTime: 2023-08-04 21:24:58
  * @FilePath: \yzyy-web\src\router\index.jsx
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -21,7 +21,6 @@ import { PublishInfo } from "../pages/PublishInfo/PublishInfo";
 // Interview
 import { Interview } from "../pages/Interview/Interview";
 import { ItvMain } from "../pages/Interview/ItvMain/ItvMain";
-import { ItvAdress } from "../pages/Interview/Component/ItvMain/ItvAdress/ItvAdress";
 
 // Result
 import { Result } from "../pages/Result/Result";
@@ -59,10 +58,6 @@ export const router = createHashRouter([
           {
             index: true,
             element: <ItvMain></ItvMain>,
-          },
-          {
-            path: "adress",
-            element: <ItvAdress></ItvAdress>,
           },
         ],
       },

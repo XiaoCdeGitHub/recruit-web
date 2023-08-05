@@ -1,15 +1,15 @@
 import styles from './buttona.module.css'
-import { Button, Input, DatePicker, Form, Select, Space, Table } from 'antd';
-import type { ColumnsType } from 'antd/es/table';
+import { Button, Input, DatePicker, Form, Select, Space, Table, Tag  } from 'antd';
+const { Column, ColumnGroup } = Table;
 interface DataType {
-  key: string;
+  key: React.Key;
   people: string;
   time: number;
   name: string;
   num: number;
   endnum: number;
 }
-const columns: ColumnsType<DataType> = [
+var data  = [
   {
     title: '主讲',
     dataIndex: 'name',
@@ -30,11 +30,11 @@ const columns: ColumnsType<DataType> = [
     title: '票数',
     dataIndex: 'num',
     key: 'num',
-  },{
+  }, {
     title: '剩余票数',
     dataIndex: 'endnum',
     key: 'endnum',
-  },]
+  },];
 const ButtonA = () => {
   return (
     <div>
@@ -69,7 +69,28 @@ const ButtonA = () => {
       </Form.Item>
         <Button>发布</Button>
     </Form>
-      <Table columns={columns} dataSource={data} />;
+    <div className={styles.boxtwo}>
+        <table className={styles.tablebox}>
+          <thead>
+            <tr>
+              <th>主讲人</th>
+              <th>时间</th>
+              <th>名称</th>
+            <th>票数</th>
+            <th>剩余票数</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

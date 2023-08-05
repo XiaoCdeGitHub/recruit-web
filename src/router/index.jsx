@@ -2,17 +2,30 @@
  * @Author: DoubleLiHao =2998000782@qq.com
  * @Date: 2023-08-02 19:38:22
  * @LastEditors: DoubleLiHao =2998000782@qq.com
- * @LastEditTime: 2023-08-02 20:35:02
+ * @LastEditTime: 2023-08-04 21:24:58
  * @FilePath: \yzyy-web\src\router\index.jsx
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 import { createHashRouter } from "react-router-dom";
+// login
 import { Login } from "../pages/Login/Login";
+// Main
 import { Main } from "../pages/Main/Main";
+
+// ShowInfo
 import { ShowInfo } from "../pages/ShowInfo/ShowInfo";
+
+// PublishInfo
 import { PublishInfo } from "../pages/PublishInfo/PublishInfo";
+
+// Interview
 import { Interview } from "../pages/Interview/Interview";
+import { ItvMain } from "../pages/Interview/ItvMain/ItvMain";
+
+// Result
 import { Result } from "../pages/Result/Result";
+
+// TimeTable
 import { TimeTable } from "../pages/TimeTable/TimeTable";
 import  ButtonA  from "../pages/PublishInfo/compounents/buttona";
 import  ButtonB  from "../pages/PublishInfo/compounents/buttonb";
@@ -58,6 +71,12 @@ export const router = createHashRouter([
       {
         path: "interview",
         element: <Interview></Interview>,
+        children: [
+          {
+            index: true,
+            element: <ItvMain></ItvMain>,
+          },
+        ],
       },
       // 面试结果
       {

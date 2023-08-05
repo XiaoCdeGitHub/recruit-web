@@ -14,6 +14,9 @@ import { PublishInfo } from "../pages/PublishInfo/PublishInfo";
 import { Interview } from "../pages/Interview/Interview";
 import { Result } from "../pages/Result/Result";
 import { TimeTable } from "../pages/TimeTable/TimeTable";
+import  ButtonA  from "../pages/PublishInfo/compounents/buttona";
+import  ButtonB  from "../pages/PublishInfo/compounents/buttonb";
+import  ButtonC  from "../pages/PublishInfo/compounents/buttonc";
 
 // hash路由 访问记得加 #
 export const router = createHashRouter([
@@ -36,6 +39,20 @@ export const router = createHashRouter([
       {
         path: "publish",
         element: <PublishInfo></PublishInfo>,
+        children:[
+        {
+            path: "buttona",
+            element:<ButtonA></ButtonA>
+          },
+          {
+            path: "buttonb",
+            element:<ButtonB></ButtonB>
+          },
+          {
+            path: "buttonc",
+            element:<ButtonC></ButtonC>
+          }
+        ]
       },
       // 面试主页
       {
@@ -52,6 +69,7 @@ export const router = createHashRouter([
         path: "timetable",
         element: <TimeTable></TimeTable>,
       },
+      
     ],
   },
 ]);

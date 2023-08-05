@@ -12,4 +12,5 @@ export const testSlice = createSlice({
     }
 })
 
-export const {setName} = testSlice.actions
+
+export const { setName } = testSlice.actions

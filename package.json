@@ -27,5 +27,14 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "vite": "^4.4.8"
+  },
+  "main": "index.js",
+  "repository": "https://github.com/tallgao/recruit-web.git",
+  "author": "tallgao <2694290816@qq.com>",
+  "license": "MIT",
+  "resolutions": {
+    "//": "Used to install imagemin dependencies, because imagemin may not be installed in China. If it is abroad, you can delete it",
+    "bin-wrapper": "npm:bin-wrapper-china",
+    "rollup": "^2.72.0"
   }
 }

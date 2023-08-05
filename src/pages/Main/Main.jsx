@@ -1,9 +1,12 @@
 import styles from './Main.module.css'
-import {Outlet, useNavigate} from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
+
+
 export const Main = () => {
     const navigate = useNavigate()
     const clickHandler = (e) => {
         navigate(e.target.getAttribute("router"));
+        console.log(e.target.getAttribute("router"));
     }
     return (
         <div className={styles.box}>

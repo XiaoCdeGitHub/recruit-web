@@ -1,0 +1,8 @@
+.adminHeader{
+    display: flex;
+    justify-content: center;
+
+}
+.userHeader{
+    text-align: center
+}

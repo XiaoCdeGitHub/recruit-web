@@ -1,0 +1,22 @@
+.box{
+    width: 70vw;
+    height: 80vh;
+    margin: 10vh auto;
+    background-color: white;
+    display: flex;
+    flex: 1;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.detailBox{
+    background-color: blue;
+    width: 50%;
+    height: 100%;
+}
+
+.commentBox{
+    height: 100%;
+    width: 50%;
+    background-color: red;
+}

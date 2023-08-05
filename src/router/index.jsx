@@ -21,12 +21,14 @@ import { PublishInfo } from "../pages/PublishInfo/PublishInfo";
 // Interview
 import { Interview } from "../pages/Interview/Interview";
 import { ItvMain } from "../pages/Interview/ItvMain/ItvMain";
+import { ItvStuForm } from "../pages/Interview/ItvStuForm/ItvStuForm";
 
 // Result
 import { Result } from "../pages/Result/Result";
 
 // TimeTable
 import { TimeTable } from "../pages/TimeTable/TimeTable";
+
 
 // hash路由 访问记得加 #
 export const router = createHashRouter([
@@ -59,6 +61,10 @@ export const router = createHashRouter([
             index: true,
             element: <ItvMain></ItvMain>,
           },
+          {
+            path: 'stuform',
+            element: <ItvStuForm></ItvStuForm>
+          }
         ],
       },
       // 面试结果

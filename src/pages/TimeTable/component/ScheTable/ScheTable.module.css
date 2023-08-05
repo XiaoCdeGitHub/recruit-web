@@ -1,0 +1,21 @@
+.tableBox {
+    border: solid 2px black;
+    height: 90%;
+}
+
+.table thead tr th {
+    text-align: center !important;
+}
+
+.table td,
+.table th {
+    font-size: 1.25rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.special-row{
+    color: #003eb3;
+    font-weight: 600;
+    background-color: #FAFAFA;
+}

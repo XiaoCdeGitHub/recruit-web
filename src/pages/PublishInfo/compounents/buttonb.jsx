@@ -4,15 +4,15 @@ const OtherPage = ({ history }) => {
     const handleGoBack = () => {
       history.goBack();
   };
-const HomePage = () => {
-  const [data, setData] = useState(null);
+  const HomePage = () => {
+    const [data, setData] = useState(null);
 
-  useEffect(() => {
-    fetch('https://api.example.com/data') // 替换为你的GET请求地址
-      .then(response => response.json())
-      .then(data => setData(data));
-  }, []);
-
+    useEffect(() => {
+      fetch('https://api.example.com/data') // 替换为你的GET请求地址
+        .then(response => response.json())
+        .then(data => setData(data));
+    }, []);
+  }
   const ButtonB = () => {
     var box = document.getElementById("box")
     var table = document.createElement("table")

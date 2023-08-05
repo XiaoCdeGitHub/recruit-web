@@ -1,14 +1,21 @@
 import styles from './buttona.module.css'
 import { Button, Input, DatePicker, Form, Select, Space, Table, Tag  } from 'antd';
 const { Column, ColumnGroup } = Table;
-interface DataType {
-  key: React.Key;
-  people: string;
-  time: number;
-  name: string;
-  num: number;
-  endnum: number;
-}
+
+const OtherPage = ({ history }) => {
+    const handleGoBack = () => {
+      history.goBack();
+  };
+
+  const HomePage = () => {
+    const [data, setData] = useState(null);
+    useEffect(() => {
+      fetch('https://api.example.com/data') // 替换为你的GET请求地址
+        .then(response => response.json())
+        .then(data => setData(data));
+    }, []);
+  }
+
 var data  = [
   {
     title: '主讲',
@@ -35,10 +42,35 @@ var data  = [
     dataIndex: 'endnum',
     key: 'endnum',
   },];
-const ButtonA = () => {
+  const ButtonA = () => {
+  var  setData=(data)=>{
+        var tbody=document.querySelector('tbody');
+    for(var i=0;i<data.length;i++){
+        var tr=document.createElement('tr');
+        tbody.appendChild(tr);
+        for(var key in data[i]){
+            var td=document.createElement('td');
+            td.innerHTML=data[i][key];
+            tr.appendChild(td);
+        }
+        
+        var td =document.createElement('td');
+        td.innerHTML='<a href="javascript:;">删除</a>';
+        tr.appendChild(td);
+    }
+    var as=document.querySelectorAll('a');
+    for(var i=0;i<as.length;i++){
+        as[i].onclick=function(){
+            tbody.removeChild(this.parentNode.parentNode);
+        }
+    } 
+  }
+  
+    
+    
   return (
     <div>
-      <Button>返回</Button>
+      <Button onClick={handleGoBack} >返回</Button>
        <Form
       labelCol={{ span: 4 }}
       wrapperCol={{ span: 14 }}
@@ -81,13 +113,6 @@ const ButtonA = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td></td>
-              <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            </tr>
           </tbody>
         </table>
       </div>

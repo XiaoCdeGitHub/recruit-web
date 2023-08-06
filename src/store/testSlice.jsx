@@ -11,5 +11,4 @@ export const testSlice = createSlice({
         name: 'hhhh'
     }
 })
-
 export const {setName} = testSlice.actions

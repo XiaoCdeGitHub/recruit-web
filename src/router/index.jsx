@@ -28,9 +28,9 @@ import { Result } from "../pages/Result/Result";
 
 // TimeTable
 import { TimeTable } from "../pages/TimeTable/TimeTable";
-import  ButtonA  from "../pages/PublishInfo/compounents/buttona";
-import  ButtonB  from "../pages/PublishInfo/compounents/buttonb";
-import  ButtonC  from "../pages/PublishInfo/compounents/buttonc";
+import  Topic  from "../pages/PublishInfo/compounents/buttona";
+import  Book  from "../pages/PublishInfo/compounents/buttonb";
+import  Place  from "../pages/PublishInfo/compounents/buttonc";
 
 
 // hash路由 访问记得加 #
@@ -56,16 +56,16 @@ export const router = createHashRouter([
         element: <PublishInfo></PublishInfo>,
         children:[
         {
-            path: "buttona",
-            element:<ButtonA></ButtonA>
+            path: "topic",
+            element:<Topic></Topic>
           },
           {
-            path: "buttonb",
-            element:<ButtonB></ButtonB>
+            path: "book",
+            element:<Book></Book>
           },
           {
-            path: "buttonc",
-            element:<ButtonC></ButtonC>
+            path: "place",
+            element:<Place></Place>
           }
         ]
       },

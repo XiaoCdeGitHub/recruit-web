@@ -4,7 +4,7 @@ import {Outlet, useNavigate} from 'react-router-dom'
 
 export const PublishInfo = () => {
     const navigate = useNavigate()
-    var isExit;
+    const isExit;
     isExit = 1;
     const clickButton = (e) => {
         if (isExit ==1) {
@@ -18,9 +18,9 @@ export const PublishInfo = () => {
         <br />  
           
         <Space direction="vertical">
-            { isExit && <button  onClick={clickButton} router="buttona">宣讲会信息</button>} 
-            {isExit && <button onClick={clickButton} router="buttonb">开放预约面试</button>}
-            {isExit && <button onClick={clickButton} router="buttonb">开放面试地点</button>}
+            { isExit && <button  onClick={clickButton} router="topic">宣讲会信息</button>} 
+            {isExit && <button onClick={clickButton} router="book">开放预约面试</button>}
+            {isExit && <button onClick={clickButton} router="place">开放面试地点</button>}
         </Space>
         <div className={styles.container}>
             <Outlet></Outlet>

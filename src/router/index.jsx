@@ -21,6 +21,7 @@ import { PublishInfo } from "../pages/PublishInfo/PublishInfo";
 // Interview
 import { Interview } from "../pages/Interview/Interview";
 import { ItvMain } from "../pages/Interview/ItvMain/ItvMain";
+import { ItvStuForm } from "../pages/Interview/ItvStuForm/ItvStuForm";
 
 // Result
 import { Result } from "../pages/Result/Result";
@@ -30,6 +31,7 @@ import { TimeTable } from "../pages/TimeTable/TimeTable";
 import  ButtonA  from "../pages/PublishInfo/compounents/buttona";
 import  ButtonB  from "../pages/PublishInfo/compounents/buttonb";
 import  ButtonC  from "../pages/PublishInfo/compounents/buttonc";
+
 
 // hash路由 访问记得加 #
 export const router = createHashRouter([
@@ -76,6 +78,10 @@ export const router = createHashRouter([
             index: true,
             element: <ItvMain></ItvMain>,
           },
+          {
+            path: 'stuform',
+            element: <ItvStuForm></ItvStuForm>
+          }
         ],
       },
       // 面试结果

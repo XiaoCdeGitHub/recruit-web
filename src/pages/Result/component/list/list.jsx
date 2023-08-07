@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Button, } from 'antd';
 import { useDispatch, useSelector } from "react-redux"
-import { Routes, Route, Link, Router } from 'react-router-dom'
+import { Routes, Route, Link } from 'react-router-dom'
 // import {Backdrop} from '../../../../UI/Backdrop/Backdrop'
 import { setList, } from '../../../../store/ResultSlice'
 import PersonalInfo from './detail/detail'

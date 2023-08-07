@@ -1,5 +1,5 @@
 .tableBox {
-    border: solid 2px black;
+    border-top: solid 2px black;
     height: 90%;
 }
 
@@ -9,13 +9,15 @@
 
 .table td,
 .table th {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     text-align: center;
     letter-spacing: 1px;
+    padding: 0 !important;
+    height: 7.25vh !important;
 }
 
 .special-row{
     color: #003eb3;
-    font-weight: 600;
+    font-weight: 700;
     background-color: #FAFAFA;
 }

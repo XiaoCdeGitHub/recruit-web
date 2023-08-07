@@ -3,9 +3,6 @@ import ReactEcharts from "echarts-for-react"
 export default function Number({ title , number}) {
     const getOption = () => {
         let option = {
-            tooltip: {
-                trigger: 'item'
-            },
             dataset: {
                 source: number
             },

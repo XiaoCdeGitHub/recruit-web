@@ -1,0 +1,8 @@
+.searchBox {
+    position: absolute;
+    right: 0;
+    width: 20vw;
+    height: 5%;
+    border-left: solid 2px black;
+    padding-top: 0.2vh;
+}

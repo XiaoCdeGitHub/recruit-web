@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
-export const numberApiSlice = createApi({
-    reducerPath: 'numberApi',
+export const showInfoApiSlice = createApi({
+    reducerPath: 'showInfoApi',
     baseQuery: fetchBaseQuery({ baseUrl: ' ' }),
     endpoints: builder => ({
         getNumber: builder.query({
@@ -10,4 +10,4 @@ export const numberApiSlice = createApi({
     })
 })
 
-export const { useGetNumberQuery } = numberApiSlice
+export const { useGetNumberQuery } = showInfoApiSlice

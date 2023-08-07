@@ -8,7 +8,7 @@
  */
 import { configureStore } from "@reduxjs/toolkit";
 // 主页的数据
-import { numberApiSlice } from "./numberApi";
+import { showInfoApiSlice } from "./showInfoApi";
 // 面试主页的数据
 import { interviewSlice } from "./interviewSlice";
 
@@ -16,7 +16,8 @@ import { loginApi } from "./loginApi";
 import { loginInfoSlice } from "./loginInfoSlice";
 
 // 面试排班的数据
-import { timeTableSlice } from "./TimeTableSlice";
+import { timeTableSlice } from "./timeTableSlice";
+import { timeTableApiSlice } from "./timeTableApi";
 
 export const store = configureStore({
   // 把自定义的Slice放到这个对象里
@@ -24,15 +25,17 @@ export const store = configureStore({
     interviewSlice: interviewSlice.reducer,
     loginInfoSlice: loginInfoSlice.reducer,
     timeTableSlice: timeTableSlice.reducer,
-    [numberApiSlice.reducerPath]: numberApiSlice.reducer,
     [loginApi.reducerPath]: loginApi.reducer,
+    [showInfoApiSlice.reducerPath]: showInfoApiSlice.reducer,
+    [timeTableApiSlice.reducerPath]:timeTableApiSlice.reducer,
   },
   middleware: (getDefaultMiddleware) => {
     // 把自定义的Api的中间件放进去
     // eg: 创建了stuAPi 就把stuApi.middleware 放到concat数组中中
     return getDefaultMiddleware().concat([
-      numberApiSlice.middleware,
       loginApi.middleware,
+      showInfoApiSlice.middleware,
+      timeTableApiSlice.middleware,
     ]);
   },
 });

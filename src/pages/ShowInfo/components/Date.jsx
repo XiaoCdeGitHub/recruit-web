@@ -3,9 +3,6 @@ import ReactEcharts from "echarts-for-react"
 export default function Date({ title,dates }) {
     const getOption = () => {
         let option = {
-            tooltip: {
-                trigger: 'item',
-            },
             xAxis: {
                 type: 'category',
                 data: dates.date,

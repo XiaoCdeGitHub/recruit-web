@@ -3,8 +3,8 @@ import { Button, } from 'antd';
 import { useDispatch, useSelector } from "react-redux"
 import { Routes, Route, Link } from 'react-router-dom'
 // import {Backdrop} from '../../../../UI/Backdrop/Backdrop'
+import { showBackdrop } from "../../../../store/ResultSlice"
 import { setList, } from '../../../../store/ResultSlice'
-import PersonalInfo from './detail/detail'
 export default function List() {
     const list = useSelector(state => state.list.list)
     //拿到的只是本账号进入之后可以拿到的list
@@ -27,12 +27,15 @@ export default function List() {
         // console.log(list[index].result)
         dispatch(setList(newList))
     }
-    console.log(list)
+    //展示遮罩层
+    const handleClick = () => {
+        dispatch(showBackdrop());
+    }
     // 拿到list之后判断面试官姓名，经过过滤再渲染到页面上
     return (
         <>
             {
-                isAdmin&&
+                isAdmin &&
                 list.map(itemObj => {
                     return (
                         <tr key={itemObj.id}>
@@ -48,13 +51,13 @@ export default function List() {
                                 <input type="checkbox" name="result" value={itemObj.result} checked={!JSON.parse(itemObj.result)} onChange={() =>
                                     checkState(itemObj.id, 'false')} />拒绝
                             </td>
-                            <td><Link to={`personalInfo/${itemObj.id}`}><Button>详情页</Button></Link></td>
+                            <td><Link to={`personalInfo/${itemObj.id}`}><Button onClick={handleClick}>详情页</Button></Link></td>
                         </tr>
                     )
                 })
             }
             {
-                !isAdmin&&
+                !isAdmin &&
                 list2.map(itemObj => {
                     return (
                         <tr key={itemObj.id}>
@@ -77,14 +80,6 @@ export default function List() {
             }
 
 
-            <div>
-
-                <Routes>
-                    <Route path='personalInfo/:id' element={<PersonalInfo />} >
-                    </Route>
-                </Routes>
-
-            </div>
         </>
 
     )

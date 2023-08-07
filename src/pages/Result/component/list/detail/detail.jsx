@@ -2,11 +2,10 @@ import React from 'react'
 import styles from './detail.module.css'
 // import { useGetPersonalInfoQuery } from '../../../../store/ResultApi';
 import { useDispatch, useSelector } from 'react-redux';
-import { useHistory } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Button } from 'antd';
 import { useParams } from 'react-router-dom';
-// import { hiddenBackdrop } from '../../../../store/ResultSlice'
-
+import { hiddenBackdrop } from '../../../../../store/ResultSlice'
 export default function PersonalInfo() {
   // 传入指定id的人的信息
   // const result=useGetPersonalInfoQuery(null,{
@@ -18,22 +17,23 @@ export default function PersonalInfo() {
   //   }
   // }
   // })
-
-  // const dispatch = useDispatch()
-  // const history = useHistory();
-  // const goBack = () => {
-  //  history.goBack();
-  // }
+  //点击隐藏遮罩层
+  const dispatch = useDispatch()
+  const navigate = useNavigate();
+  const goBack = () => {
+    navigate('/result',{replace:true});
+    dispatch(hiddenBackdrop())
+  }
+  
   const { id } = useParams()
   const list = useSelector(state => state.list.list)
-
   const personalInfo = list.find(itemObj => itemObj.id === id)
-
   return (
     <div className={styles.box} align="center">
       {
-        <table>
-          <caption>{personalInfo.name}的详细信息</caption>
+       <>
+        <div className={styles.title}> <h3 >{personalInfo.name}的详细信息</h3></div>
+        <table className={styles.secondTable}>
           <tbody>
             <tr>
               <td>姓名：{personalInfo.name}</td>
@@ -70,9 +70,9 @@ export default function PersonalInfo() {
               <td></td>
             </tr>
           </tbody>
-        </table>
+        </table></>
       }
-      <Button >返回</Button>
+      <Button onClick={goBack} className={styles.goBack}>返回</Button>
     </div>
   )
 }

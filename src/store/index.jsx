@@ -21,7 +21,7 @@ import { timeTableSlice } from "./TimeTableSlice";
 //面试结果的数据
 import listApi from "./ResultApi";
 import {listReducer} from './ResultSlice'
-import { testSlice } from "./testSlice";
+// import { testSlice } from "./testSlice";
 export const store = configureStore({
   // 把自定义的Slice放到这个对象里
   reducer: {

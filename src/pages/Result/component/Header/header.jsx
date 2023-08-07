@@ -7,13 +7,12 @@ export default function Header() {
     const isAdmin = useSelector(state => state.list.isAdmin)
     // const list = useSelector(state => state.list.list)
     // 原来的数组别动
-    const BackUp =useSelector(state=>state.list.BackUp)
+    const BackUp = useSelector(state => state.list.BackUp)
     const dispatch = useDispatch()
     const nameSearch = useRef()
     const nameChange = () => {
         const newList = BackUp.filter((itemObj) => {
-            if (itemObj.name.includes(nameSearch.current.value)) 
-            {
+            if (itemObj.name.includes(nameSearch.current.value)) {
                 return itemObj
             }
         })
@@ -54,7 +53,9 @@ export default function Header() {
                 </div>
             }
             {
-                !isAdmin && <h3 className={styles.userHeader}>我面试的学员</h3>
+                !isAdmin && <>
+                    <h3 className={styles.userHeader}>我面试的学员</h3>
+                </>
             }
         </div>
     )

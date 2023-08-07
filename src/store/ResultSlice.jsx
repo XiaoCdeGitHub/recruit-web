@@ -98,7 +98,7 @@ export const listSlice = createSlice({
             },
 
         ],
-        isEnterBackdrop: true,
+        isEnterBackdrop: false,
         isAdmin: true
     },
     reducers: {
@@ -111,12 +111,12 @@ export const listSlice = createSlice({
             state.list = action.payload
         },
         // 做一个遮罩层先咯
-        // showBackdrop(state,action) {
-        //     state.isEnterBackdrop = true
-        // },
-        // hiddenBackdrop(state, action) {
-        //     state.isEnterBackdrop = false
-        // }
+        showBackdrop(state,action) {
+            state.isEnterBackdrop = true
+        },
+        hiddenBackdrop(state, action) {
+            state.isEnterBackdrop = false
+        }
 
     },
 

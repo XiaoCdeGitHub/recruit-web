@@ -11,3 +11,8 @@
 
 table { border-collapse: collapse;}
 table,table tr th, table tr td { border:1px solid #000000; }
+.firstTable{
+    width: 50vw;
+    height: 30vh;
+    text-align: center;
+}

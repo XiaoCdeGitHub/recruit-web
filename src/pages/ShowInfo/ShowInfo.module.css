@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+}
+
+.chartBox{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: white;
+}
+
+.chart1{
+    width: 60%;
+    height: 42%;
+    background-color: white;
+    text-align: center;
+    border: black 2px solid;
+}
+
+.chart1 h2{
+    position: relative;
+    bottom: 40px;
+}
+
+.chart2{
+    width: 36%;
+    height: 42%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.numsBox{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 40%;
+}
+
+.numBox{
+    width: 45%;
+    height: 100%;
+    background-color: white;
+    border: black 2px solid;
+}
+
+.num{
+    padding-top: 10%;
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    color: #234199;
+}
+
+.genderBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 50%;
+    background-color: white;
+    border: black 2px solid;
+}
+
+.genders{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    bottom: 10px;
+    width: 100%;
+    height: 80%;
+}
+
+.gender{
+    width: 30%;
+    text-align: center;
+}
+
+.gender h3{
+    position: relative;
+    bottom: 10px;
+}
+
+.chart3{
+    width: 100%;
+    height: 54%;
+    margin-top: 3%;
+    background-color: white;
+    border: black 2px solid;
+    text-align: center;
+}
+
+.chart3 h2{
+    position: relative;
+    bottom: 20px;
+}

@@ -1,3 +1,66 @@
+.container{
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    /* background-color: pink; */
+    background-color: blanchedalmond;
+}
 .box{
-    
+    background-color: rgb(46, 45, 45);
+    height: 80vh;
+    width: 70vw;
+    margin: 10vh auto 0;
+    border-radius:5dvw;
+    position: relative;
+}
+.content{
+    height: 80vh;
+    width: 70vw;
+    display:flex;
+    background-color: aquamarine;
+    /* background-color: white; */
+    border-radius: 5dvw;
+    transform: translate(-12px,-12px);
+    overflow: hidden;
+    font-size:1.5rem
+
+}
+.content_left{
+    flex:1;
+    /* background-color: pink; */
+}
+.content_right{
+    flex: 1;
+    background-color: skyblue;
+    background-color: white;
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+.input_container{
+    height: 20vh;
+    width: 25vw;
+    margin: 30vh auto 0;
+    /* background-color: aliceblue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+.groupId{
+    width: 24vw;
+    height: 5vh;
+    border-radius: 50vb;
+}
+.password{
+    width: 24vw;
+    height: 5vh;
+    border-radius: 50vb;
+}
+.button{
+    margin: 0 auto;
+    border-radius: 50px;
+    height: 4vh;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 3vh;
 }

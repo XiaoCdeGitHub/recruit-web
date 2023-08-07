@@ -1,0 +1,58 @@
+.box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardBox{
+    width: 50vw;
+    height: 70vh;
+    background-color: white;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.top{
+    width: 100%;
+    height: 8vh;
+    background-color: rgba(128, 205, 235,.6);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2vw;
+}
+
+.topTime{
+    font-size: 2rem;
+}
+
+.topAdress{
+    font-size: 2rem;
+}
+
+.stuBox{
+    width: 100%;
+    height: 50vh;
+}
+
+.bottom{
+    position: absolute;
+    bottom: 2vh;
+    left: 19vw;
+    width: 12vw;
+    height: 7vh;
+    background-color: gray;
+    border-radius: 2rem;
+    text-align: center;
+    line-height: 7vh;
+    font-size: 2rem;
+    color: black;
+}
+
+.bottom:hover{
+    color: white;
+    cursor: pointer;
+}

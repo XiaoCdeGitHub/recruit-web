@@ -11,7 +11,6 @@ export default function Gender({ title, data }) {
             },
             legend: {
                 show: false,
-
             },
             series: [
                 {

@@ -11,7 +11,7 @@ import React from 'react'
 import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
 import {Input, Space,Button} from 'antd';
 import { UserOutlined } from '@ant-design/icons';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { usePostLoginMutation } from '../../store/loginApi';
 import { enterSuperAdmin,notSuperAdmin,setGroupId } from '../../store/loginInfoSlice';
 import { useNavigate } from 'react-router-dom'
@@ -20,6 +20,7 @@ export const Login = () => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const [postLoginInfo, message] = usePostLoginMutation()
+    const data = useSelector((state) => state.loginInfoSlice);
     //post请求返回一个函数，一个存储信息的对象
     const clickHandler = ()=>{
         postLoginInfo()

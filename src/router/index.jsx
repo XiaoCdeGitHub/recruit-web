@@ -69,7 +69,7 @@ export const router = createHashRouter([
       },
       // 面试结果
       {
-        path: "result",
+        path: "result/*",
         element: <Result></Result>,
       },
       // 面试排班

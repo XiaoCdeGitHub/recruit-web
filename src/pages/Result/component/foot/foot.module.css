@@ -1,0 +1,14 @@
+.leftButton{
+    height: 30px;
+    position: fixed;
+    bottom: 50px;
+    left: 230px;
+    background-color: antiquewhite;
+}
+.rightButton{
+    height: 30px;
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    background-color: antiquewhite;
+}

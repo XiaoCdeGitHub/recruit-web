@@ -3,7 +3,7 @@ import styles from './ScheTable.module.css'
 import { Table } from 'antd'
 
 import { useSelector, useDispatch } from 'react-redux'
-import { changeSelectedGroup } from '../../../../store/TimeTableSlice'
+import { changeSelectedGroup } from '../../../../store/timeTableSlice'
 
 export default function ScheTable() {
     const dataSource = useSelector(state => state.timeTableSlice.showData)
@@ -39,7 +39,7 @@ export default function ScheTable() {
         if (isGroupChange) {
             const rowSelection = {
                 onChange: (selectedRowKeys, selectedRows) => {
-                    // console.log(selectedRowKeys, selectedRows);
+                    console.log(selectedRowKeys, selectedRows);
                     dispatch(changeSelectedGroup([...selectedRowKeys]))
                 },
                 getCheckboxProps: (record) => ({
@@ -62,11 +62,10 @@ export default function ScheTable() {
                 className={styles.table}
                 dataSource={dataSource}
                 columns={columns}
-                pagination={{
-                    position: ['bottomCenter'],
-                }}
+                pagination={{position: ['bottomCenter']}}
                 rowSelection={isRowSelection()}
                 rowClassName={rowClassName}
+                locale={{emptyText: '暂无排班信息'}}
             />
         </div>
     );

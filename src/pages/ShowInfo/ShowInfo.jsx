@@ -5,23 +5,15 @@ import Date from './components/Date';
 import Gender from './components/Gender';
 import NumShow from './components/NumShow';
 
-import { numberApiSlice } from '../../store/numberApi';
+import { useGetNumberQuery } from '../../store/showInfoApi';
 
 export const ShowInfo = () => {
   //获取number数据
-  // const { data: number } = numberApiSlice()
-  const number = [
-    [567, '开发'],
-    [123, '设计'],
-    [88, '秘书处']
-  ]
+  // const { data: number } = useGetNumberQuery()
+  const number = [[567, '开发'],[123, '设计'],[88, '秘书处']]
   const appliNum = 680
   const submitNum = 450
-  const genders = [
-    [484, 200],
-    [49, 68],
-    [35, 52]
-  ]
+  const genders = [[484, 200],[49, 68],[35, 52]]
   const dates = {
     date: ['9.10', '9.11', '9.12', '9.13', '9.14', '9.15', '9.16', '9.17', '9.18'],
     number: [158, 116, 105, 168, 125, 175, 183]

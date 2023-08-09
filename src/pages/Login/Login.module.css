@@ -3,36 +3,38 @@
     height: 100vh;
     width: 100vw;
     /* background-color: pink; */
-    background-color: blanchedalmond;
+    /* background-color: blanchedalmond; */
+    background-image: url(https://donghehe.oss-cn-hangzhou.aliyuncs.com/123.png);
+    background-size:100% 100%;
 }
-.box{
-    background-color: rgb(46, 45, 45);
-    height: 80vh;
-    width: 70vw;
-    margin: 10vh auto 0;
-    border-radius:5dvw;
-    position: relative;
-}
-.content{
-    height: 80vh;
-    width: 70vw;
-    display:flex;
-    background-color: aquamarine;
-    /* background-color: white; */
-    border-radius: 5dvw;
-    transform: translate(-12px,-12px);
-    overflow: hidden;
-    font-size:1.5rem
+img{
+    position:absolute;
+    width: 8vw;
+    /* height: 15vh; */
+    opacity:0.6;
+    right: 2vw;
+    top:1vh;
 
 }
+.content{
+    height: 70vh;
+    width: 60vw;
+    margin: 15vh auto 0;
+    display:flex;
+    background-color: rgba(102, 131, 228, 0.2);
+    border-radius: 5dvw;
+    overflow: hidden;
+    font-size:1.5rem;
+    position: relative;
+    box-shadow: 1px 1px 10px rgba(17, 74, 140, 0.6)
+}
+
 .content_left{
     flex:1;
     /* background-color: pink; */
 }
 .content_right{
     flex: 1;
-    background-color: skyblue;
-    background-color: white;
     /* display: flex; */
     /* flex-direction: column; */
 }
@@ -44,23 +46,49 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-
 }
-.groupId{
+
+.input_container span{
+    background-color: transparent;
+    /* border: none; */
+}
+.group{
     width: 24vw;
     height: 5vh;
     border-radius: 50vb;
+    background-color: transparent;
+    color: white;
+    /* background-color:rgba(31, 49, 108, 0.2); */
 }
+.group input{
+    background-color: transparent;
+    color:white
+}
+.group ::placeholder{
+    color: rgb(134, 186, 231);
+}
+
 .password{
     width: 24vw;
     height: 5vh;
     border-radius: 50vb;
+    background-color: transparent ;
+    color: white;
+
 }
+.password input{
+    background-color: transparent;
+}
+.password ::placeholder{
+    color: rgb(134, 186, 231);
+}
+
 .button{
     margin: 0 auto;
-    border-radius: 50px;
+    border-radius: 50vb;
     height: 4vh;
+    width:10vw;
     font-size: 1.2rem;
     text-align: center;
-    line-height: 3vh;
+    line-height: 2vh;
 }

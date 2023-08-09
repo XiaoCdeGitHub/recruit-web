@@ -2,7 +2,7 @@
  * @Author: dongheheyeye 119031939+dongheheyeye@users.noreply.github.com
  * @Date: 2023-08-04 10:11:05
  * @LastEditors: dongheheyeye 119031939+dongheheyeye@users.noreply.github.com
- * @LastEditTime: 2023-08-06 10:36:15
+ * @LastEditTime: 2023-08-09 20:39:47
  * @FilePath: \dom\recruit-web\src\pages\Login\Login.jsx
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -42,29 +42,25 @@ export const Login = () => {
     return(
         <React.Fragment>
             <div className={styles.container}>
-                <div className={styles.box}>
                     <div className={styles.content}>
-                        <div className={styles.content_left}>left</div>
+                    <img src="https://donghehe.oss-cn-hangzhou.aliyuncs.com/%E4%BA%91%E9%A1%B6%E4%B9%A6%E9%99%A2.png" alt="" />
+
+                        <div className={styles.content_left}></div>
                         <div className={styles.content_right}>
-                            <div className={styles.input_container}>
-                                <Input placeholder="groupId" className={styles.groupId}
-                                prefix={<UserOutlined />} type="number" />
-                                <Space direction="vertical">
-                                    <Input.Password className={styles.password}
-                                    placeholder="password"
-                                    iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}/>
-                                </Space>
-                                {/* <button  onClick={ clickHandler }>登陆</button> */}
-                                <Space direction="vertical" onClick={clickHandler} className={styles.button}
-                                style={{ width: '25%'}}>
-                                    <Button type="primary" className={styles.button} block>
+                            <div  className={styles.input_container}> 
+                                <Input placeholder="group" className={styles.group}
+                                prefix={<UserOutlined />} />
+                                 <Input.Password
+                                placeholder="input password"
+                                className={styles.password}
+                                iconRender={(visible) => (visible ? <EyeTwoTone className={styles.password}/> : <EyeInvisibleOutlined className={styles.password}/>)}
+                                />
+                                    <Button type="primary"onClick={clickHandler} className={styles.button} >
                                     登陆
                                     </Button>
-                                </Space>
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
         </React.Fragment>
     )

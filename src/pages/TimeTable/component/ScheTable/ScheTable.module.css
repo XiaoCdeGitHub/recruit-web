@@ -5,6 +5,11 @@
 
 .table thead tr th {
     text-align: center !important;
+    border: none;
+}
+
+.table table{
+    border: none;
 }
 
 .table td,
@@ -14,6 +19,7 @@
     letter-spacing: 1px;
     padding: 0 !important;
     height: 7.25vh !important;
+    border: none;
 }
 
 .special-row{

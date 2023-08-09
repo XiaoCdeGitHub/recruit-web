@@ -9,19 +9,26 @@ import { createSlice } from "@reduxjs/toolkit";
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 export const interviewSlice = createSlice({
-    name: 'interviewSlice',
-    initialState: {
-        isEnterBackdrop: false,
+  name: "interviewSlice",
+  initialState: {
+    isEnterBackdrop: false,
+    isEnterImgBackdrop: false,
+  },
+  reducers: {
+    showBackdrop(state, action) {
+      state.isEnterBackdrop = true;
     },
-    reducers: {
-        showBackdrop(state,action) {
-            state.isEnterBackdrop = true
-        },
-        hiddenBackdrop(state, action) {
-            state.isEnterBackdrop = false
-        }
-    }
-})
+    hiddenBackdrop(state, action) {
+      state.isEnterBackdrop = false;
+    },
+    showImgBackdrop(state, action) {
+      state.isEnterImgBackdrop = true;
+    },
+    hiddenImgBackdrop(state, action) {
+      state.isEnterImgBackdrop = false;
+    },
+  },
+});
 
-export const {showBackdrop, hiddenBackdrop} = interviewSlice.actions
-
+export const { showBackdrop, hiddenBackdrop, showImgBackdrop, hiddenImgBackdrop } =
+  interviewSlice.actions;

@@ -1,3 +1,4 @@
+
 /*
  * @Author: DoubleLiHao =2998000782@qq.com
  * @Date: 2023-08-03 17:03:55
@@ -19,6 +20,11 @@ import { loginInfoSlice } from "./loginInfoSlice";
 import { timeTableSlice } from "./timeTableSlice";
 import { timeTableApiSlice } from "./timeTableApi";
 
+import { timeTableSlice } from "./TimeTableSlice";
+//面试结果的数据
+import listApi from "./ResultApi";
+import {listReducer} from './ResultSlice'
+
 export const store = configureStore({
   // 把自定义的Slice放到这个对象里
   reducer: {
@@ -28,6 +34,9 @@ export const store = configureStore({
     [loginApi.reducerPath]: loginApi.reducer,
     [showInfoApiSlice.reducerPath]: showInfoApiSlice.reducer,
     [timeTableApiSlice.reducerPath]:timeTableApiSlice.reducer,
+    list:listReducer,
+    [numberApiSlice.reducerPath]: numberApiSlice.reducer,
+    [listApi.reducerPath]:listApi.reducer
   },
   middleware: (getDefaultMiddleware) => {
     // 把自定义的Api的中间件放进去
@@ -36,6 +45,8 @@ export const store = configureStore({
       loginApi.middleware,
       showInfoApiSlice.middleware,
       timeTableApiSlice.middleware,
+      listApi.middleware
     ]);
   },
 });
+

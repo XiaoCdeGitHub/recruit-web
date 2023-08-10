@@ -1,8 +1,6 @@
 import styles from './buttonc.module.css'
 import { Button, DatePicker, Form, Select, Input } from 'antd';
 import React, { useEffect, useState } from 'react';
-import moment from "moment";
-import "moment/locale/zh-cn"
     
     
     

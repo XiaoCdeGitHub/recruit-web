@@ -2,11 +2,9 @@ import styles from './buttona.module.css'
 import { Button, Input, DatePicker, Form, Select, Space, Table, Tag  } from 'antd';
 const { Column, ColumnGroup } = Table;
 import  { useEffect, useState } from 'react';
-import moment from "moment";
-import "moment/locale/zh-cn"
 
 
-20const ButtonA = () => {
+const ButtonA = () => {
   //发送post请求
   const sendData = () => {
     setFormData((prevFormData) => ({

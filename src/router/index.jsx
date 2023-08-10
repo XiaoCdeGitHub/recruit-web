@@ -2,7 +2,7 @@
  * @Author: DoubleLiHao =2998000782@qq.com
  * @Date: 2023-08-02 19:38:22
  * @LastEditors: DoubleLiHao =2998000782@qq.com
- * @LastEditTime: 2023-08-04 21:24:58
+ * @LastEditTime: 2023-08-10 10:26:34
  * @FilePath: \yzyy-web\src\router\index.jsx
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -17,6 +17,9 @@ import { ShowInfo } from "../pages/ShowInfo/ShowInfo";
 
 // PublishInfo
 import { PublishInfo } from "../pages/PublishInfo/PublishInfo";
+import Topic from "../pages/PublishInfo/components/Buttona";
+import Book from "../pages/PublishInfo/components/Buttonb";
+import Place from "../pages/PublishInfo/components/Buttonc";
 
 // Interview
 import { Interview } from "../pages/Interview/Interview";
@@ -28,10 +31,6 @@ import { Result } from "../pages/Result/Result";
 
 // TimeTable
 import { TimeTable } from "../pages/TimeTable/TimeTable";
-import  Topic  from "../pages/PublishInfo/compounents/buttona";
-import  Book  from "../pages/PublishInfo/compounents/buttonb";
-import  Place  from "../pages/PublishInfo/compounents/buttonc";
-
 
 // hash路由 访问记得加 #
 export const router = createHashRouter([
@@ -54,20 +53,20 @@ export const router = createHashRouter([
       {
         path: "publish",
         element: <PublishInfo></PublishInfo>,
-        children:[
-        {
+        children: [
+          {
             path: "topic",
-            element:<Topic></Topic>
+            element: <Topic></Topic>,
           },
           {
             path: "book",
-            element:<Book></Book>
+            element: <Book></Book>,
           },
           {
             path: "place",
-            element:<Place></Place>
-          }
-        ]
+            element: <Place></Place>,
+          },
+        ],
       },
       // 面试主页
       {
@@ -79,9 +78,9 @@ export const router = createHashRouter([
             element: <ItvMain></ItvMain>,
           },
           {
-            path: 'stuform',
-            element: <ItvStuForm></ItvStuForm>
-          }
+            path: "stuform",
+            element: <ItvStuForm></ItvStuForm>,
+          },
         ],
       },
       // 面试结果
@@ -94,7 +93,6 @@ export const router = createHashRouter([
         path: "timetable",
         element: <TimeTable></TimeTable>,
       },
-      
     ],
   },
 ]);

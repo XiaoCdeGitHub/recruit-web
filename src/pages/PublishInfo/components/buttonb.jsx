@@ -1,8 +1,6 @@
 import styles from './buttonb.module.css'
 import { Button, Form, Input, Select, DatePicker } from 'antd';
 import React, { useEffect, useState } from 'react';
-import moment from "moment";
-import "moment/locale/zh-cn"
 
   const ButtonB = () => {
     
@@ -107,6 +105,5 @@ import "moment/locale/zh-cn"
         </div>
       );
     }
-  }
 
 export default ButtonB;

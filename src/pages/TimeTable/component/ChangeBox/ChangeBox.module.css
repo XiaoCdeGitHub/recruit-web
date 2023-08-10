@@ -1,0 +1,24 @@
+.changeBox {
+    height: 5%;
+    display: inline-block;
+    border-right: solid 2px black;
+}
+
+.changeBox .selected {
+    background: #4096ff;
+    border: #003eb3 solid 1px;
+    color: black;
+}
+
+.changeBox button {
+    border: solid 1px grey;
+    height: 100%;
+    width: 50%;
+    background: transparent;
+    border-radius: 0;
+    font-size: 1.2rem;
+}
+
+.changeBox button:hover {
+    border: 1px solid #003eb3;
+}

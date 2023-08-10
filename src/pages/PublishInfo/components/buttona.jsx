@@ -105,7 +105,8 @@ import "moment/locale/zh-cn"
         <Input value={ formData.num}/>
       </Form.Item>
       <Form.Item label="时间">
-        <DatePicker onChange={onChange}/>
+          <DatePicker onChange={onChange} />
+          
         </Form.Item>
       <Form.Item label="地点">
         <Input value={ formData.place} />

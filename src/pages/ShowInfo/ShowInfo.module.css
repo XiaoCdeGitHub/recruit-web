@@ -47,8 +47,8 @@
 }
 
 .num{
-    padding-top: 10%;
-    font-size: 40px;
+    padding-top: 8%;
+    font-size: 3rem;
     font-weight: 800;
     text-align: center;
     color: #234199;
@@ -80,7 +80,7 @@
 
 .gender h3{
     position: relative;
-    bottom: 10px;
+    bottom: 8%;
 }
 
 .chart3{
@@ -94,5 +94,5 @@
 
 .chart3 h2{
     position: relative;
-    bottom: 20px;
+    bottom: 5%;
 }

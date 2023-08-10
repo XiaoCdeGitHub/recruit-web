@@ -2,18 +2,20 @@
     width: 100%;
     height: 100%;
     background-color: white;
+    position: relative;
 }
 
 .top{
     width: 100%;
     height: 30%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     background-color: rgba(54, 254, 220, 0.6)
 }
 
 .img{
+    margin-right: 4rem;
     width: 30%;
     height: 80%;
     background-color: beige;
@@ -33,9 +35,9 @@
 .baseInfo div{
     width: 100%;
     height: 30%;
-    /* background-color: azure; */
-    line-height: 400%;
-    font-size: 1.5rem;
+    display:flex;
+    font-size: 1.3rem;
+    align-items: center;
 }
 
 .otherInfo{
@@ -50,18 +52,26 @@
 }
 
 .back{
-    width: 25%;
+    width: 30%;
     height: 8%;
-    margin: 5% auto;
+    bottom: 3%;
+    left: 35%;
+    border-radius: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.6rem;
     background-color: rgba(0, 0, 0, .6);
-    border-radius: 1rem;
-    font-size: 1.5rem;
+    position: absolute;
     cursor: pointer;
 }
 
 .back:hover{
     color: white;
+}
+
+.imgBack{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
 }

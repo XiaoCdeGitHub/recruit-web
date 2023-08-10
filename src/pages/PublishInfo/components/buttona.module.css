@@ -1,0 +1,15 @@
+.inputcss {
+    width: 200px;
+}
+
+.boxone {
+    color: azure;
+    background-color: rgb(132, 169, 132)
+}
+
+.boxtwo{
+    color: azure;
+    margin-top: 20px;
+    width:500px;
+    background-color: darkseagreen;
+}

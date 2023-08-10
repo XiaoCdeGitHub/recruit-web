@@ -28,6 +28,9 @@ import { Result } from "../pages/Result/Result";
 
 // TimeTable
 import { TimeTable } from "../pages/TimeTable/TimeTable";
+import  Topic  from "../pages/PublishInfo/compounents/buttona";
+import  Book  from "../pages/PublishInfo/compounents/buttonb";
+import  Place  from "../pages/PublishInfo/compounents/buttonc";
 
 
 // hash路由 访问记得加 #
@@ -51,6 +54,20 @@ export const router = createHashRouter([
       {
         path: "publish",
         element: <PublishInfo></PublishInfo>,
+        children:[
+        {
+            path: "topic",
+            element:<Topic></Topic>
+          },
+          {
+            path: "book",
+            element:<Book></Book>
+          },
+          {
+            path: "place",
+            element:<Place></Place>
+          }
+        ]
       },
       // 面试主页
       {
@@ -77,6 +94,7 @@ export const router = createHashRouter([
         path: "timetable",
         element: <TimeTable></TimeTable>,
       },
+      
     ],
   },
 ]);

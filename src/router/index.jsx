@@ -2,7 +2,7 @@
  * @Author: DoubleLiHao =2998000782@qq.com
  * @Date: 2023-08-02 19:38:22
  * @LastEditors: DoubleLiHao =2998000782@qq.com
- * @LastEditTime: 2023-08-10 10:26:34
+ * @LastEditTime: 2023-08-10 10:39:48
  * @FilePath: \yzyy-web\src\router\index.jsx
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -17,9 +17,6 @@ import { ShowInfo } from "../pages/ShowInfo/ShowInfo";
 
 // PublishInfo
 import { PublishInfo } from "../pages/PublishInfo/PublishInfo";
-import Topic from "../pages/PublishInfo/components/Buttona";
-import Book from "../pages/PublishInfo/components/Buttonb";
-import Place from "../pages/PublishInfo/components/Buttonc";
 
 // Interview
 import { Interview } from "../pages/Interview/Interview";
@@ -53,20 +50,6 @@ export const router = createHashRouter([
       {
         path: "publish",
         element: <PublishInfo></PublishInfo>,
-        children: [
-          {
-            path: "topic",
-            element: <Topic></Topic>,
-          },
-          {
-            path: "book",
-            element: <Book></Book>,
-          },
-          {
-            path: "place",
-            element: <Place></Place>,
-          },
-        ],
       },
       // 面试主页
       {

@@ -64,7 +64,7 @@ export const StuInfoDetail = () => {
           <div className={styles.img} onClick={showImg}>
             <img
               className={styles.picture}
-              src="https://img-doubleli.oss-cn-hangzhou.aliyuncs.com/8eba916a32dd29152e3667bf5ccf2d6.png"
+              src=""
             />
           </div>
           <div className={styles.baseInfo}>
@@ -96,10 +96,10 @@ export const StuInfoDetail = () => {
           </div>
           <div className={styles.imgBox}>
             <div className={styles.imgbox} ref={imgbox}>
-              <img src="https://img-doubleli.oss-cn-hangzhou.aliyuncs.com/7bf1d4e58670805d20273ce31cea2b6.jpg" />
-              <img src="https://img-doubleli.oss-cn-hangzhou.aliyuncs.com/ca1c3331a9d55f408cc4ec184c718bc.jpg" />
-              <img src="https://img-doubleli.oss-cn-hangzhou.aliyuncs.com/8eba916a32dd29152e3667bf5ccf2d6.png" />
-              <img src="https://img-doubleli.oss-cn-hangzhou.aliyuncs.com/bce6341fdd480a3e422fe8155ceb688.png" />
+              <img />
+              <img />
+              <img />
+              <img />
             </div>
           </div>
           <div className={styles.iconLeft} onClick={moveImgbox} name="left">

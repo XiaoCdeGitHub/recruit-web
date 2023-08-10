@@ -7,14 +7,13 @@
     background-image: url(https://donghehe.oss-cn-hangzhou.aliyuncs.com/123.png);
     background-size:100% 100%;
 }
-img{
+.img{
     position:absolute;
     width: 8vw;
     /* height: 15vh; */
     opacity:0.6;
     right: 2vw;
     top:1vh;
-
 }
 .content{
     height: 70vh;
